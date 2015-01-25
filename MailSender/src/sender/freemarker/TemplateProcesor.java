@@ -1,10 +1,13 @@
-package freemarker;
+package sender.freemarker;
+
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.HashMap;
 import java.util.Map;
+
+import org.springframework.stereotype.Component;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -14,6 +17,7 @@ import freemarker.template.TemplateException;
  * @author Tomek
  *
  */
+@Component
 public class TemplateProcesor {
 	
 	Configuration configuration = new Configuration();

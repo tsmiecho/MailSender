@@ -1,4 +1,5 @@
-package model;
+package sender.model;
+
 
 /**
  * Model reprezentujacy mejla

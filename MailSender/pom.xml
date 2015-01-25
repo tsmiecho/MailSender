@@ -4,27 +4,54 @@
 	<groupId>MailSender</groupId>
 	<artifactId>MailSender</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<org.springframework.version>4.0.3.RELEASE</org.springframework.version>
+<!-- 		<org.slf4j.version>1.7.10</org.slf4j.version> -->
+		<org.log4j.version>1.2.17</org.log4j.version>
+		<javax.mail.version>1.4.4</javax.mail.version>
+		<org.codehaus.sonar.version>4.5.2</org.codehaus.sonar.version>
+		<org.freemarker.version>2.3.20</org.freemarker.version>
+	</properties>
 	<dependencies>
+
+		<!-- Sonar -->
 		<dependency>
 			<groupId>org.codehaus.sonar</groupId>
 			<artifactId>sonar-plugin-api</artifactId>
-			<version>4.5.2</version>
+			<version>${org.codehaus.sonar.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
-			<version>2.3.20</version>
+			<version>${org.freemarker.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${org.springframework.version}</version>
+		</dependency>
+
+		<!-- Java Mail -->
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
-			<version>1.4.4</version>
+			<version>${javax.mail.version}</version>
 		</dependency>
+
+		<!-- Logowanie -->
+<!-- 		<dependency> -->
+<!-- 		<groupId>org.slf4j</groupId> -->
+<!-- 		<artifactId>slf4j-log4j12</artifactId> -->
+<!-- 		<version>${org.slf4j.version}</version> -->
+<!-- 		</dependency> -->
+	
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.16</version>
+			<version>${org.log4j.version}</version>
 		</dependency>
+	
 	</dependencies>
 	<build>
 		<sourceDirectory>src</sourceDirectory>

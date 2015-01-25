@@ -1,8 +1,10 @@
-package dao;
+package sender.dao;
+
 
 import java.util.List;
 
-import model.MailModel;
+import sender.model.MailModel;
+
 
 /**
  * @author Tomek

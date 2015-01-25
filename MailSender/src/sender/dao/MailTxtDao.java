@@ -1,7 +1,5 @@
-/**
- * 
- */
-package dao;
+package sender.dao;
+
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,16 +10,19 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
 
-import freemarker.TemplateProcesor;
-import model.MailModel;
+import sender.model.MailModel;
+
 
 /**
  * @author Tomek
  * 
- * nauczyciel, dziecko w szkole, wolontariusz w domu dziecka, poprostu fan o materialy promocyjne
+ * Implementacja oparta na plikach tekstowych
  * 
  */
+
+@Component
 public class MailTxtDao implements JMailDao {
 	
 	private static final Logger LOGGER = Logger.getLogger(MailTxtDao.class);

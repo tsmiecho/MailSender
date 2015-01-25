@@ -1,4 +1,5 @@
-package gui;
+package sender.gui;
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -12,8 +13,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import model.MailModel;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import sender.MailSender;
+import sender.model.MailModel;
 
 /**
  * Glowny komponent gui
@@ -21,11 +25,12 @@ import sender.MailSender;
  * @author Tomek
  *
  */
+@Component
 public class MainFrame extends JFrame {
 
-	/**
-	 * 
-	 */
+	@Autowired
+	private MailSender sender;
+	
 	private static final long serialVersionUID = 1L;
 	private JButton button = new JButton("Wyœlij");
 	private JTextArea textArea = new JTextArea(8, 40);
@@ -60,7 +65,6 @@ public class MainFrame extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent arg0) {
-			MailSender sender = new MailSender();
 			MailModel model = new MailModel();
 			model.setSender(mail.getText());
 			model.setPassword(password.getText());
@@ -71,4 +75,12 @@ public class MainFrame extends JFrame {
 		}
 
 	}
+	public MailSender getSender() {
+		return sender;
+	}
+
+	public void setSender(MailSender sender) {
+		this.sender = sender;
+	}
+
 }
