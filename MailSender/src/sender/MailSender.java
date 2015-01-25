@@ -1,7 +1,10 @@
 package sender;
 
+import freemarker.TemplateProcesor;
+import freemarker.template.TemplateException;
 import gui.MainFrame;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
@@ -12,6 +15,8 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+
+import org.apache.log4j.Logger;
 
 import model.MailModel;
 import dao.JMailDao;
@@ -26,9 +31,13 @@ import dao.MailTxtDao;
  */
 public class MailSender {
 
+	private final static Logger LOGGER = Logger.getLogger(MailSender.class);
+	
+	private TemplateProcesor procesor = new TemplateProcesor();
+	
 	public static void main(String... vargs) {
 
-		MainFrame frame = new MainFrame();		
+		new MainFrame();		
 	}
 
 	public void send(final MailModel model) {
@@ -39,38 +48,37 @@ public class MailSender {
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
 		props.put("mail.smtp.host", "poczta.interia.pl");
-		// props.put("mail.smtp.host", "smtp.gmail.com");
 		props.put("mail.smtp.port", "587");
 
 		Session session = Session.getInstance(props,
 				new javax.mail.Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
 						return new PasswordAuthentication( model.getSender(), model.getPassword());
-//								"m.rytych2003@poczta.fm", "a7188236");
 					}
 				});
 
 		for (MailModel mail : messages) {
 			Message message = new MimeMessage(session);
-			// message.setFrom(new
-			// InternetAddress("tomasz.smiechowicz15@gmail.com"));
+		
 			try {
-//				message.setFrom(new InternetAddress("m.rytych2003@poczta.fm"));
 				message.setFrom(new InternetAddress( model.getSender()));
 				message.setRecipients(Message.RecipientType.TO,
 						InternetAddress.parse(mail.getRecipient()));
 				message.setSubject(mail.getSubject());
-//				message.setText(model.getContent());
-				message.setText(model.getContent());
+				message.setText(procesor.process(model.getContent(), mail.getClub()));
 
 				Transport.send(message);
 
+				LOGGER.info("Done " + mail.getRecipient());
 			} catch (MessagingException e) {
-				System.out.println("Error" + mail.getRecipient() + e);
+				LOGGER.error("MessagingException " + mail.getRecipient() + e);	
+			} catch (IOException e) {
+				LOGGER.error("IOException " + mail.getRecipient() + e);
+			} catch (TemplateException e) {
+				LOGGER.error("TemplateException " + mail.getRecipient() + e);
 			}
-			System.out.println("Done " + mail.getRecipient());
 		}
 
-		System.out.println("Finish");
+		LOGGER.debug("Finish");
 	}
 }

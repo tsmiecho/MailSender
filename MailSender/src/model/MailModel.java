@@ -1,6 +1,3 @@
-/**
- * 
- */
 package model;
 
 /**
@@ -20,6 +17,8 @@ public class MailModel {
 	private String subject;
 	
 	private String content;
+	
+	private String club;
 
 	public String getRecipient() {
 		return recipient;
@@ -59,6 +58,14 @@ public class MailModel {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getClub() {
+		return club;
+	}
+
+	public void setClub(String club) {
+		this.club = club;
 	}
 	
 	

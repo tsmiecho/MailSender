@@ -1,9 +1,7 @@
-/**
- * 
- */
 package gui;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -68,6 +66,8 @@ public class MainFrame extends JFrame {
 			model.setPassword(password.getText());
 			model.setContent(textArea.getText());
 			sender.send(model);
+			button.setBackground(Color.darkGray);
+			button.setEnabled(false);
 		}
 
 	}
