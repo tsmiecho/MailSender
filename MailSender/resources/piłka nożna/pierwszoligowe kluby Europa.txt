@@ -1,0 +1,427 @@
+kfelbasani@gmail.com;FK Elbasani
+futbolli@bashkiavlore.org;Flamurtari FC
+juristeurogjici@gmail.com;FK Kukësi
+kf_laci@live.com;KF Laçi
+info@fcp.al;FK Partizani
+kfskenderbeu.com;KF Skënderbeu
+kfteuta@yahoo.com;KF Teuta
+kftirana@albmail.com;KF Tirana
+info@vllaznia.eu;KF Vllaznia
+secretariat@asterastripolis.gr;Asteras Tripolis FC
+atromitos@atromitosfc.gr;Atromitos FC
+info@ergotelis.gr;Ergotelis FC
+grammateia@aelk.gr;Kalloni FC
+info@aokerkyra.com.gr;Kerkyra FC
+info@levadiakosfc.gr;Levadiakos FC
+eam@ofifc.gr;OFI Crete FC
+footballdpt@olympiacos.org;Olympiacos FC
+info@pao.gr;Panathinaikos FC
+info@panionios.gr;Panionios GSS
+info@panthrakikos.com;Panthrakikos FC
+info@paokfc.gr;PAOK FC
+info@pasgiannina.gr;PAS Giannina FC
+panetolikos@otenet.gr;Panaitolikos GFS
+fcplatanias@gmail.com;Platanias FC
+veriafc@veriafc.gr;Veria FC
+office@skodaxanthifc.gr;Xanthi FC
+office@bhfc.hu;Budapest Honvéd FC
+dvscrt@dvsc.hu;Debreceni VSC
+info@dvtk.eu;Diósgyõri VTK
+iroda@dpase.hu;Dunaújváros PASE
+ftc@fradi.hu;Ferencvárosi TC
+titkarsag@eto.hu;Gyõri ETO FC
+titkarsag@kecskemetite.hu;Kecskeméti TE
+iroda@lombardfcpapa.hu;Lombard-Pápa TFC
+info@mtkbudapest.hu;MTK Budapest
+info@szpari1928.hu;Nyíregyháza
+pse@enternet.hu;Paksi FC
+pmfc@pmfc.hu;Pécsi MFC
+bolla.krisztian@pfla.hu;Puskás Akadémia FC
+titkarsag@haladas.hu;Szombathelyi Haladás
+ujpestfc@ujpestfc.hu;Újpest FC
+titkarsag@videotonfc.hu;Videoton FC
+knattspyrna@breidablik.is;Breidablik
+fh@fh.is;FH Hafnarfjördur
+fjolnir@fjolnir.is;Fjölnir Reykjavik
+knattspyrna@fram.is;Fram Reykjavík
+fylkir@fylkir.com;Fylkir
+ibv@ibv.is;ÍBV Vestmannaeyjar
+kef-fc@keflavik.is;Keflavík
+jonas@kr.is;KR Reykjavík
+knattspyrna@stjarnan.is;Stjarnan
+knattspyrna@thorsport.is;Thór Akureyri
+valur@valur.is;Valur Reykjavík
+knattspyrna@vikingur.is;Víkingur Reykjavík
+rafi@jbz.co.il;FC Ashdod
+lizzy@bjerusalem.co.il;Beitar Jerusalem FC
+bneisakhnin@gmail.com;Bnei Sakhnin FC
+hapoel_akko@walla.com;Hapoel Akko FC
+office@hapoelb7.com;Hapoel Beer Sheva FC
+ronfeldheim@gmail.com;Hapoel Haifa FC
+yosied8@gmail.com;Hapoel Kiryat
+office@hapoel-raanana.co.il;Hapoel Ra'anana FC
+rachel@hapoelta-fc.co.il;Hapoel Tel-Aviv FC
+info@maccabihaifafc.com;Maccabi Haifa FC
+m-pt@zahav.net.il;Maccabi Petah
+mn@fcmn.co.il;Maccabi Netanya FC
+liran@mtafc.com;Maccabi Tel-Aviv FC
+atalanta@lega-calcio.it;Atalanta BC
+cagliari@lega-calcio.it;Cagliari Calcio
+cesena@lega-calcio.it;AC Cesena
+chievoverona@lega-calcio.it;AC Chievo Verona
+palermo@lega-calcio.it;US Citta di Palermo
+empoli@lega-calcio.it;Empoli FC
+fiorentina@lega-calcio.it;ACF Fiorentina
+genoa@lega-calcio.it;Genoa CFC
+hellasverona@lega-calcio.it;Hellas Verona FC
+internazionale@lega-calcio.it;FC Internazionale Milano
+juventus@lega-calcio.it;Juventus
+lazio@lega-calcio.it;S.S. Lazio
+milan@lega-calcio.it;AC Milan
+napoli@lega-calcio.it;SSC Napoli
+parma@lega-calcio.it;Parma FC
+roma@lega-calcio.it;AS Roma
+sampdoria@lega-calcio.it;UC Sampdoria
+sassuolo@lega-calcio.it;US Sassuolo Calcio
+torino@lega-calcio.it;Torino FC
+udinese@lega-calcio.it;Udinese Calcio
+fk-aktobe@mail.ru;FC Aktobe
+club@fca.kz;FC Astana
+fc_atyrau@mail.ru;FC Atyrau
+irtysh-fc@mail.ru;FC Irtysh Pavlodar
+info@fckairat.kz;FC Kairat Almaty
+fc_kaysar@rambler.ru;FC Kaysar Kyzylorda
+pfk_ordabasy@mail.ru;FC Ordabasy Shymkent
+shahter56@mail.ru;FC Shakhter Karagandy
+fk_spartak_semey@mail.ru;FC Spartak Semey
+fc_taraz@mail.ru;FC Taraz
+fc-tobol@mail.ru;FC Tobol Kostanay
+pfc_zhetisu@mail.ru;FC Zhetysu Taldykorgan
+bfcdaugava@inbox.lv;BFC Daugavpils
+fcdaugavadaugavpils@inbox.lv;FC Daugava Daugavpils
+fkdaugavariga@gmail.com;FK Daugava Riga
+vuguls@fkjelgava.lv;FK Jelgava
+jurgis.ozolins@fkliepaja.lv;SK Liepajas Metalurgs
+info@fsmetta.lv;FS METTA/LU Riga
+info@skontofc.lv;Skonto FC
+fcspartaks@inbox.lv;FK Spartaks Jurmala
+office@fkventspils.lv;FK Ventspils
+info@fcbalzers.li;FC Balzers
+info@usv.li;FC USV Eschen/Mauren
+info@fcruggell.li;FC Ruggell
+fcschaan@powersurf.li;FC Schaan
+spiko@fctriesen.li;FC Triesen
+info@fctriesenberg.li;FC Triesenberg
+info@fcvaduz.li;FC Vaduz
+atlantas@atlantas.lt;FK Atlantas
+donatas@fkbanga.lt;FK Banga
+darius@alytis.lt;FK Dainava
+info@fkekranas.lt;FK Ekranas
+info@klaipedos-granitas.lt;FK Klaipedos Granitas
+info@fkkruoja.lt;FK Kruoja
+fcsiauliai@fcsiauliai.lt;FC Šiauliai
+fksuduva@takas.lt;FK Suduva
+info@fkt.lt;FK Trakai
+info@zalgiris-vilnius.lt;VMFD Žalgiris
+meyerj@pt.lu;FC Differdange 03
+f91secretariat@pt.lu;F91 Dudelange
+fcetz@pt.lu;FC Etzella Ettelbruck
+pimknaff@pt.lu;CS Fola Esch
+schoux@pt.lu;CS Grevenmacher
+fcush@pt.lu;US Hostert
+flfnews@fccanach.lu;FC Jeunesse Canach
+dema@cegecom.lu;AS Jeunesse Esch
+un97@pt.lu;UN Käerjéng 97
+info@usmondorf.lu;US Mondorf-les-Bains
+progres@pt.lu;FC Progres Niedercorn
+info@usrumelange.lu;US Rumelange
+hmohr@pt.lu;FC Victoria Rosport
+woltz71@pt.lu;FC Wiltz 71
+fcbregalnica2008@gmail.com;FK Bregalnica Stip
+fcmetalurg@yahoo.com;FK Metalurg Skopje
+fkpelister.bitola@gmail.com;FK Pelister
+angelovskiigor@hotmail.com;FK Rabotnicki
+kfrenova2008@yahoo.com;FK Renova
+info@kfshkendija.com;FK Shkëndija 79
+sileksfk@yahoo.com;FK Sileks
+turnovo_kukus@yahoo.com;FK Turnovo
+fc_vardar.skopje@yahoo.com;FK Vardar
+balzanfc@mfa.com.mt;Balzan Youths FC
+birkirkarafc@mfa.com.mt;Birkirkara FC
+florianafc@mfa.com.mt;Floriana FC
+hiberniansfc@mfa.com.mt;Hibernians FC
+mostafc@mfa.com.mt;Mosta FC
+naxxarfc@mfa.com.mt;Naxxar Lions FC
+pietafc@mfa.com.mt;Pieta Hotspurs FC
+qormifc@mfa.com.mt;Qormi FC
+sliemafc@mfa.com.mt;Sliema Wanderers FC
+tarxienfc@mfa.com.mt;Tarxien Rainbows FC
+vallettafc@mfa.com.mt;Valletta FC
+zebbugfc@mfa.com.mt;Zebbug Rangers FC
+info@academia.md;FC Academia Chisinau
+info@fccostuleni.md;FC Costuleni
+office@fcdacia.md;FC Dacia Chisinau
+dinamo-auto@mail.ru;FC Dinamo-Auto
+info@milsami.md;FC Milsami Orhei
+fc-saxan@yandex.ru;FC Saxan
+club@sc.sheriff.md;FC Sheriff
+info@fc-tiraspol.com;FC Tiraspol
+fcveris@mail.com;FC Veris
+ssfotbal-balti@yandex.ru;FC Zarea Balti
+zimbru@zimbru.md;FC Zimbru Chisinau
+fkberane1920@hotmail.com;FK Berane
+fcbokelj@t-com.me;FK Bokelj
+fcbuducnost@gmail.com;FK Buduænost
+fkcelik@t-com.me;FK Èelik Nikšiæ
+ofkgrbalj@t-com.me;OFK Grbalj
+f.k.lovcen@t-com.me;FK Lovæen
+f.mladost@yahoo.com;FK Mladost Podgorica
+fkmogren@t-com.me;FK Mogren
+z.o.c.a.p@t-com.me;OFK Petrovac
+rudarmne@gmail.com;FK Rudar Pljevlja
+fksutjeska.niksic@t-com.me;FK Sutjeska
+fkzeta@t-com.me;FK Zeta
+info@ga-eagles.nl;Go Ahead Eagles
+info@ajax.nl;AFC Ajax
+info@az.nl;AZ Alkmaar
+info@nac.nl;NAC Breda
+info@cambuur.nl;SC Cambuur
+info@adodenhaag.nl;ADO Den Haag
+info@fcdordrecht.nl;FC Dordrecht
+info@psv.nl;PSV Eindhoven
+info@sbvexcelsior.nl;SBV Excelsior
+info@feyenoord.nl;Feyenoord
+info@fcgroningen.nl;FC Groningen
+info@sc-heerenveen.nl;sc Heerenveen
+info@heracles.nl;Heracles Almelo
+administratie@fctwente.nl;FC Twente
+info@fcutrecht.nl;FC Utrecht
+info@vitesse.nl;Vitesse
+info@willem-ii.nl;Willem II
+info@peczwolle.nl;PEC Zwolle
+ferneypark@aol.com;Ballinamallard
+secretary@cliftonvillefc.net;Cliftonville FC
+secretary@colerainefc.com;Coleraine FC
+ncrues@aol.com;Crusaders FC
+info@dungannonswiftsfc.co.uk;Dungannon Swifts FC
+glenavonfootballclub@utvinternet.com;Glenavon FC
+secretary@glentoran.com;Glentoran FC
+kontor@aafk.no;Aalesunds FK
+bg@glimt.no;FK Bodo/Glimt
+post@brann.no;SK Brann
+post@fkh.no;FK Haugesund
+lsk@lsk.no;Lillestrom SK
+mfk@moldefk.no;Molde FK
+post@odd.no;Odd Grenland
+info@rbk.no;Rosenborg BK
+sandnesulf@sandnesulf.no;Sandnes Ulf
+post@sarpsborg08.no;Sarpsborg 08 FF
+post@sogndalfotball.no;Sogndal IL Fotball
+admin@stabak.no;Stabak
+admin@ikstart.no;IK Start
+godset@godset.no;Stromsgodset IF
+viking@viking-fk.no;Viking FK
+post@vif.no;Valerenga Fotball
+geral@fcarouca.pt;FC Arouca
+geral@academica-oaf.pt;A. Académica de
+sec.geral@slbenfica.pt;SL Benfica
+mail@scbraga.pt;SC Braga
+geral@estorilpraiasad.net;Estoril Praia
+geral@gilvicentefc.pt;Gil Vicente FC
+geral@csmaritimo.pt;CS Marítimo
+moreirensefc@sapo.pt;Moreirense FC
+geral@cdnacional.pt;CD Nacional
+secretaria@osbelenenses.pt;CF Os Belenenses
+geral@fcpf.pt;FC Paços de Ferreira
+geral@fcpenafiel.pt;FC Penafiel
+geral@portosad.pt;FC Porto
+rioave@mail.telepac.pt;Rio Ave FC
+sporting@sportmultimedia.pt;Sporting Clube de
+sad@vfc.pt;Vitória FC
+geral@vitoriasc.pt;Vitória SC
+info@athlonetownfc.ie;Athlone Town AFC
+lynn@bohemians.ie;Bohemian FC
+carlislegrounds@eircom.net;Bray Wanderers AFC
+info@corkcityfc.ie;Cork City FC
+office@derrycity.net;Derry City FC
+info@droghedaunited.ie;Drogheda United FC
+dlkfc@eircom.net;Dundalk FC
+info@limerickfc.ie;Limerick FC
+info@stpatsfc.com;Saint Patrick’s
+info@shamrockrovers.ie;Shamrock Rovers FC
+secretary@sligorovers.com;Sligo Rovers FC
+diarmuid.mcnally@ucd.ie;University College
+fcbotosani@fcbotosani.ro;FC Astra Giurgiu
+fcbrasov2007@yahoo.com;FC Bra?ov
+office@fcceahlaul.ro;FC Ceahlãul
+office@cfr1907.ro;CFR 1907 Cluj
+office@csconcordia.ro;CS Concordia Chiajna
+contact@csuc.ro;CS U Craiova
+fcdinamo@fcdinamo.ro;FC Dinamo Bucureºti
+contact@csmsiasi.ro;CSMS Ia?i
+pandurii@pandurii-tg-jiu.ro;FC Oþelul Galaþi
+office@fcpetrolul.ro;FC Petrolul Ploieºti
+rapid@fcrapid.ro;FC Rapid Bucureºti
+office@steauafc.com;FC Steaua Bucureºti
+office@asatirgumures.ro;ASA Târgu Mure?
+contact@universitateacluj.ro;FC Universitatea Cluj
+office@academiahagi.ro;FC Viitorul Constanþa
+fc-amkar@amkar.org;FC Amkar Perm
+tula.arsenal@mail.ru;FC Arsenal Tula
+refer@pfc-cska.com;PFC CSKA Moskva
+office@fcdinamo.ru;FC Dinamo Moskva
+info@fckrasnodar.ru;FC Krasnodar
+office@fckuban.ru;FC Kuban Krasnodar
+info@fclm.ru;FC Lokomotiv Moskva
+np-mordovia2009@mail.ru;FC Mordovia Saransk
+fcrostov@aaanet.ru;FC Rostov
+info@rubin-kazan.ru;FC Rubin Kazan
+spartak@spartak.com;FC Spartak Moskva
+office@fc-terek.ru;FC Terek Grozny
+fctorpedomoscow@mail.ru;FC Torpedo Moskva
+fcufa@bashtel.ru;FC Ufa
+info@fc-ural.ru;FC Ural Ekaterinburg
+office@fc-zenit.ru;FC Zenit
+cailungo@fsgc.info;SP Cailungo
+info@cosmos.sm;S.S. Cosmos
+domagnano@fsgc.info;Domagnano FC
+faetano@fsgc.info;SC Faetano
+fiorentino@fsgc.info;S.S. Fiorentino
+folgore@fsgc.info;S.S. Folgore/Falciano
+juvenes@fsgc.info;AC Juvenes-Dogana
+info@lafiorita.sm;SP La Fiorita
+info@polisportivalibertas.com;AC Libertas
+murata@fsgc.info;S.S. Murata
+presidente@pennarossa.com;S.S. Pennarossa
+fabio.giardi1@virgilio.it;S.S. San Giovanni
+astercasali@omniway.sm;SP Tre Fiori
+trepenne@omniway.sm;SP Tre Penne
+vitus@fsgc.info;S.S. Virtus
+steven@afc.co.uk;Aberdeen FC
+publicrelations@celticfc.co.uk;Celtic FC
+admin@dundeeunitedfc.co.uk;Dundee United FC
+scott@acciesfc.co.uk;Hamilton FC
+jim.falconer@ictfc.co.uk;Inverness Caledonian
+mfc@motherwellfc.co.uk;Motherwell FC
+ianmaxwell@ptfc.co.uk;Partick Thistle FC
+paul@perthsaints.co.uk;Saint Johnstone FC
+info@saintmirren.net;Saint Mirren FC
+office@ofkbeograd.co.rs;OFK Beograd
+fk.borac@open.telekom.rs;FK Borak Cacak
+lana@crvenazvezdafk.com;FK Crvena zvezda
+office@fkcukaricki.rs;FK Èukarièki
+info@fkdonjisrem.com;FK Donji Srem
+fkjagodina@open.telekom.rs;FK Jagodina
+fkmladostlucani@gmail.com;FK Mladost Luèani
+kontakt@fknapredak.rs;FK Napredak
+office@fknovipazar.rs;FK Novi Pazar
+football@partizan.rs;FK Partizan
+fcradbgd@gmail.com;FK Rad
+office@fkradnicki.com;FK Radnièki 1923
+office@fkradnicki-nis.com;FK Radnièki Niš
+office@fcvojvodina.co.rs;FK Vojvodina
+office@fkvozdovac.rs;FK Voždovac
+fkdukla@fkdukla.sk;FK Dukla Banská
+fcdac@fcdac.sk;FC DAC 1904 Dunajská
+sekretariat@mfkkosice.sk;MFK Košice
+fksenica@fksenica.eu;FK Senica
+info@skslovan.com;ŠK Slovan Bratislava
+spartak@spartakmyjava.sk;Spartak Myjava
+sekretariat@spartaktrnava.sk;FC Spartak Trnava
+zpfutbal@mbox.zelpo.sk;FO ŽP Šport
+astrencin@astrencin.sk;AS Trenèín
+fcvion@fcvion.sk;FC ViOn Zlaté Moravce
+mskzilina@mskzilina.sk;MŠK Žilina
+info@nk-celje.si;NK Celje
+info@nkdomzale.si;NK Domžale
+info@nd-gorica.com;ND Gorica
+info@fckoper.si;FC Koper
+nkkrka1922@gmail.com;NK Krka
+info@nkmaribor.com;NK Maribor
+info@nkolimpija.si;NK Olimpija Ljubljana
+klub@nk-radomlje.si;NK Radomlje
+nk.rudar.velenje@t-2.net;NK Rudar Velenje
+info@nkzavrc.si;NK Zavrè
+jbonillo@udalmeriasad.com;UD Almeria
+prentsa@athletic-club.net;Athletic Club
+oab@fcbarcelona.cat;FC Barcelona
+web@celtavigo.net;RC Celta de Vigo
+cordobacf@cordobacf.com;Córdoba CF
+deportivo@canaldeportivo.com;RC Deportivo La Coruna
+sdeibar@sdeibar.com;SD Eibar
+info@elchecf.es;Elche CF
+info@rcdespanyol.com;RCD Espanyol
+gerencia@getafecf.com;Getafe CF
+gerencia@granadacf.es;Granada CF
+admon@levanteud.es;Levante UD
+administración@malagacf.es;Málaga CF
+international@realmadrid.es;Real Madrid CF
+realsoc@realsociedad.com;Real Sociedad de Fútbol
+sevillafc@sevillafc.es;Sevilla FC
+mangeles@valenciacf.es;Valencia CF
+villarrealcf@villarrealcf.es;Villarreal CF
+fotboll@aik.se;AIK
+info@atvidabergsff.se;Atvidabergs FF
+kansli@brommapojkarna.se;IF Brommapojkarna
+dif.fotboll@dif.se;Djurgardens IF
+info@elfsborg.se;IF Elfsborg
+fff@falkenbergsff.se;Falkenbergs FF
+fotboll@gefleif.se;Gefle IF
+info@ifkgoteborg.se;IFK Göteborg
+kansli@bkhacken.se;BK Häcken
+info@hbk.se;Halmstads BK
+info@hif.se;Helsingborgs IF
+kalmarff@kalmarff.se;Kalmar FF
+info@mff.se;Malmö FF
+info@maif.se;Mjällby AIF
+ifk@ifknorrkoping.se;IFK Norrköping
+fotboll@oskfotboll.se;Örebro SK
+info@fcaarauag.ch;FC Aarau
+info@fcb.ch;FC Basel 1893
+info@gcz.ch;Grasshopper Club
+office@fcl.ch;FC Luzern
+info@fc-sion.ch;FC Sion
+info@fcsg.ch;FC St. Gallen
+info@fcthun.ch;FC Thun
+info@fcvaduz.li;FC Vaduz
+info@bscyb.ch;BSC Young Boys
+fcz@fcz.ch;FC Zürich
+akhisarspor@gmail.com;Akhisar Belediyespor
+kulupbalikesirspor@hotmail.;Balikesirspor
+info@bjk.com.tr;Beºiktaº A.ª.
+bursaspor@bursaspor.org.tr;Bursaspor
+bilgi@eskisehirspor.org;Eskiºehirspor
+fbfutbol@fenerbahce.org;Fenerbahçe A.ª.
+galatasaray@galatasaray.org;Galatasaray A.ª.
+info@gaziantepspor.org.tr;Gaziantepspor
+info@kasimpasa.com.tr;Kasimpaºa A.ª.
+info@erciyesspor.org.tr;Kayseri Erciyesspor
+konyaspor@konyaspor.org.tr;Konyaspor
+iletisim@caykurrizespor.org.tr;Rizespor
+bilgi@sivasspor.org.tr;Sivasspor
+info@trabzonspor.org.tr;Trabzonspor A.ª.
+fc@chernomorets.odessa.ua;FC Chornomorets Odessa
+fcdnipro@a-teleport.com;FC Dnipro
+alina@goal.com.ua;FC Dynamo Kyiv
+fc.zakarpattya@gmail.com;FC Hoverla Uzhhorod
+fcmm@fcilyich.com.ua;FC Illychivets Mariupol
+net@fckarpaty.lviv.ua;FC Karpaty Lviv
+info@metallist.kharkov.ua;FC Metalist Kharkiv
+info@metallurg.donetsk.ua;FC Metalurh Donetsk
+metalurg@fcmetalurg.com.ua;FC Metalurh Zaporizhya
+olimpik2001@rambler.ru;FC Olimpik Donetsk
+feedback@shakhtar.com;FC Shakhtar Donetsk
+info@fcvolyn.net;SC Volyn Lutsk
+office@vorskla.com.ua;FC Vorskla Poltava
+fc@zarya-lugansk.com;FC Zorya Luhansk
+webteam@atfc.org.uk;Aberystwyth Town FC
+jonathan.williams@airbus.com;AUK Broughton FC
+ruth.crump@aykroyds.co.uk;Bala Town FC
+info@bangorcityfc.com;Bangor City FC
+admin@carmarthentownafc.net;Carmarthen Town AFC
+mark.mckean@sky.com;Cefn Druids FC
+trevorgreen3@btinternet.com;Connah's Quay FC
+office@newtownafc.co.uk;Newtown AFC
+mark@porttalbottown.co.uk;Port Talbot Town FC
+mike@rhylfc.com;Rhyl FC
+ian.williams@tnsfc.co.uk;The New Saints FC
