@@ -1,6 +1,4 @@
-package sender;
-
-import freemarker.template.TemplateException;
+package sender.service;
 
 import java.io.IOException;
 import java.util.List;
@@ -21,8 +19,8 @@ import org.springframework.stereotype.Component;
 import sender.dao.JMailDao;
 import sender.dao.MailTxtDao;
 import sender.freemarker.TemplateProcesor;
-import sender.gui.MainFrame;
 import sender.model.MailModel;
+import freemarker.template.TemplateException;
 
 
 
@@ -39,10 +37,6 @@ public class MailSender {
 	
 	@Autowired
 	private TemplateProcesor procesor; 
-	
-	public static void main(String[] args) {
-		new MainFrame();
-	}
 	
 	public void send(final MailModel model) {
 		JMailDao mailDao = new MailTxtDao();

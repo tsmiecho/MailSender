@@ -16,8 +16,8 @@ import javax.swing.JTextField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import sender.MailSender;
 import sender.model.MailModel;
+import sender.service.MailSender;
 
 /**
  * Glowny komponent gui
