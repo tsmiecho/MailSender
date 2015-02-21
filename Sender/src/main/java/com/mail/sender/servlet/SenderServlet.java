@@ -4,12 +4,11 @@
 package com.mail.sender.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 import java.util.Properties;
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.AddressException;
@@ -20,6 +19,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.appengine.api.datastore.Entity;
+import com.mail.sender.dao.MailerDao;
+import com.mail.sender.freemarker.TemplateProcesor;
+
 /**
  * @author tsmiecho
  *
@@ -27,31 +30,34 @@ import javax.servlet.http.HttpServletResponse;
 public class SenderServlet extends HttpServlet {
 
 	@Override
-	public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		PrintWriter writer = resp.getWriter();
+	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
 
+		TemplateProcesor procesor = new TemplateProcesor();
+		MailerDao manager = new MailerDao();
 		Properties props = new Properties();
-        Session session = Session.getDefaultInstance(props, null);
- 
+		Session session = Session.getDefaultInstance(props, null);
 
+		//TODO odczyt z bazy takich parametrow jak adres odbiorcy, nazwa odbiorcy, content, komitety olimpijskie juz zapisane
 		try {
-		    Message msg = new MimeMessage(session);
-		    msg.setFrom(new InternetAddress("smiechu18@gmail.com", "Example.com Admin"));
-		    msg.addRecipient(Message.RecipientType.TO,
-		     new InternetAddress("smiecho18@interia.pl", "Mr. User"));
-		    msg.setSubject("Your Example.com account has been activated");
-		    msg.setText("wdwdw\nwdwd");
-		    Transport.send(msg);
-		    
-		    
+			Message msg = new MimeMessage(session);
+			msg.setFrom(new InternetAddress("smiechu18@gmail.com",
+					"smiechu18@gmail.com"));
+			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
+					"smiecho18@interia.pl", "smiecho18@interia.pl"));
+			msg.setSubject("Warm greetings");
+			List<Entity> entries = manager.getEntries();
+			msg.setText(procesor.process((String) entries.get(0).getProperty("content"), "Testowy klub"));
+			Transport.send(msg);
+
 		} catch (AddressException e) {
-			 resp.setContentType("text/plain");
-	            resp.getWriter().println("Something went wrong. Please try again.");
-	            throw new RuntimeException(e);
+			resp.setContentType("text/plain");
+			resp.getWriter().println("Something went wrong. Please try again.");
+			throw new RuntimeException(e);
 		} catch (MessagingException e) {
-			 resp.setContentType("text/plain");
-	            resp.getWriter().println("Something went wrong. Please try again.");
-	            throw new RuntimeException(e);
+			resp.setContentType("text/plain");
+			resp.getWriter().println("Something went wrong. Please try again.");
+			throw new RuntimeException(e);
 		}
 		resp.sendRedirect("/");
 	}
