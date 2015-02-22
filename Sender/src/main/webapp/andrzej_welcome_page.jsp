@@ -5,9 +5,9 @@
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
 </head>
 <body>
-	<h1>Hello World</h1>
-<!-- 	<form action="/send" method="post"> -->
-<!-- 	    <div><input type="submit" value="Wyślij"/></div> -->
-<!-- 	</form> -->
+	<h1>Witaj</h1>
+	<div><a href="/dodaj/adres">Dodaj treść listu</a></div>
+	<div><a href="/dodaj/klub">Dodaj mejla do listy odbiorców</a></div>
+	<div>W razie problemów: smiechu18@gmail.com</div>
 </body>
 </html>

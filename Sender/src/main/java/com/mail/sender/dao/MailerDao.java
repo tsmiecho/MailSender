@@ -27,7 +27,7 @@ public class MailerDao {
 	    return contents;
 	}
 	
-	public void saveData(String content){
+	public void saveData(String content, String language){
 		Scanner scanner = new Scanner(content);
 		scanner.useDelimiter(";|\\s+");
 		List<Entity> clubs = new ArrayList<Entity>();
@@ -37,6 +37,7 @@ public class MailerDao {
 			clubEntity.setProperty("creationDate", date);
 			clubEntity.setProperty("mail", scanner.next());
 			clubEntity.setProperty("club", scanner.next());
+			clubEntity.setProperty("language", language);
 			clubs.add(clubEntity);
 		}
 		scanner.close();

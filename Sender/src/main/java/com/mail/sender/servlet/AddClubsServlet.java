@@ -23,7 +23,7 @@ public class AddClubsServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		MailerDao dao = new MailerDao();
-		dao.saveData(req.getParameter("content"));
+		dao.saveData(req.getParameter("content"),req.getParameter("language"));
 		resp.sendRedirect("/");
 	}
 }
