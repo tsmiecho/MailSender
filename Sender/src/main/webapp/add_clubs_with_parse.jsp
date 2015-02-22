@@ -3,6 +3,7 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
+    <title>Parser/kluby</title>
 </head>
 <body>
 	parser dla klubów :

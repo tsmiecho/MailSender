@@ -2,7 +2,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <html>
 <head>
-<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
+	<title>Dodaj odbiorce</title>
 </head>
 <body>
 	<h2>Formularz dodawania klubu do listy odbiorców.</h2>

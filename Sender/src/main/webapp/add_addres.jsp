@@ -3,6 +3,7 @@
 <html>
 <head>
     <link type="text/css" rel="stylesheet" href="/stylesheets/main.css"/>
+    <title>Dodaj treść</title>
 </head>
 <body>
 	<h2>Dodawanie treści listu. Obsługuje parametr freemarkerowy {club}. 
