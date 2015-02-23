@@ -27,7 +27,7 @@ public class AddAdressServlet extends HttpServlet {
 		MailerDao manager = new MailerDao();
 		
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		List<Entity> entries = manager.getEntries();
+		List<Entity> entries = manager.getAllContentEntries();
 		for(Entity entity : entries){
 			datastore.delete(entity.getKey());
 		}

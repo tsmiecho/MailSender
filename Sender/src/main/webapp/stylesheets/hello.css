@@ -1,0 +1,17 @@
+body {
+	font-family: Verdana, Helvetica, sans-serif;
+	background-color: #FFFFCC;
+}
+
+table {
+	border-collapse: collapse;
+	padding: 15px;
+	background-color: #DFF;
+	width: 100%;
+	border: 1px dashed #000;
+}
+
+table tbody tr td {
+	text-align: center;
+	padding: 15px;
+}

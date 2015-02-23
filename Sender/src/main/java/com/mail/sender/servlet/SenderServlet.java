@@ -37,18 +37,20 @@ public class SenderServlet extends HttpServlet {
 		MailerDao manager = new MailerDao();
 		Properties props = new Properties();
 		Session session = Session.getDefaultInstance(props, null);
-
-		//TODO odczyt z bazy takich parametrow jak adres odbiorcy, nazwa odbiorcy, content, komitety olimpijskie juz zapisane
+		List<Entity> contents = manager.getAllContentEntries();
+		List<Entity> clubs = manager.getOldestClubEntries();
 		try {
-			Message msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress("smiechu18@gmail.com",
-					"smiechu18@gmail.com"));
-			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					"smiecho18@interia.pl", "smiecho18@interia.pl"));
-			msg.setSubject("Warm greetings");
-			List<Entity> entries = manager.getEntries();
-			msg.setText(procesor.process((String) entries.get(0).getProperty("content"), "Testowy klub"));
-			Transport.send(msg);
+			for(Entity entity : clubs){
+				Message msg = new MimeMessage(session);
+				msg.setFrom(new InternetAddress("smiechu18@gmail.com",
+						"smiechu18@gmail.com"));
+				msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
+						(String)entity.getProperty("mail"), (String)entity.getProperty("mail")));
+				msg.setSubject("Warm greetings");
+				
+				msg.setText(procesor.process((String) contents.get(0).getProperty("content"), (String)entity.getProperty("club")));
+				Transport.send(msg);
+			}
 
 		} catch (AddressException e) {
 			resp.setContentType("text/plain");

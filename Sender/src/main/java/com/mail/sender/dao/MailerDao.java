@@ -20,14 +20,14 @@ import com.google.appengine.api.datastore.Query;
  */
 public class MailerDao {
 	
-	public List<Entity> getEntries(){
+	public List<Entity> getAllContentEntries(){
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 	    Query query = new Query("Content");
 	    List<Entity> contents = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(1));
 	    return contents;
 	}
 	
-	public void saveData(String content, String language){
+	public void parseAndSaveData(String content, String language){
 		Scanner scanner = new Scanner(content);
 		scanner.useDelimiter(";|\\s+");
 		List<Entity> clubs = new ArrayList<Entity>();
@@ -44,5 +44,19 @@ public class MailerDao {
 		
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		datastore.put(clubs);
+	}
+
+	public List<Entity> getOldestClubEntries() {
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	    Query query = new Query("Club");
+	    List<Entity> entries = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(4));
+	    return entries;
+	}
+
+	public List<Entity> getAllClubEntries() {
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+	    Query query = new Query("Club");
+	    List<Entity> entries = datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
+	    return entries;
 	}
 }
