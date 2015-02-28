@@ -37,7 +37,7 @@
 <table>
 	<tbody>
 		<tr>
-			<td class="title"><strong>Program do wysyłki mejli - Google Cloud</strong></td>
+			<td class="title"><a href="https://github.com/tsmiecho/MailSender/tree/master/Sender"><strong>Program do wysyłki mejli - Google Cloud</strong></a></td>
 		</tr>
 		<tr>
 			<td>Stworzyłem skalowalną aplikację na serwerze Google App Engine. Odpowiedzialną za wysyłkę mejli tematycznych do adresatów zgromadzonych w bazie danych.
