@@ -3,13 +3,13 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="/stylesheets/hello.css" />
-<title>About me</title>
+<title>Experience</title>
 </head>
-<h1>Doświadczenie zawodowe:</h1>
+<h1 class="main-title">Doświadczenie zawodowe:</h1>
 <table>
 	<tbody>
 		<tr>
-			<td><h3>1.03.2014 - 30.04.2014  <b>Centrum Informatyki Uniwersytetu Łódzkiego</b></h3></td>
+			<td class="title">1.03.2014 - 30.04.2014  <a href="http://www.uni.lodz.pl/ouni/struktura,opis,3505000000"><strong>Centrum Informatyki Uniwersytetu Łódzkiego</strong></a></td>
 		</tr>
 		<tr>
 			<td>Brałem udział w projekcie wewnątrz Uniwersytetu. Zajmowaliśmy się automatyzacją księgowości.
@@ -17,7 +17,7 @@
 			firmy Microsoft, głównie VisualBasic, SQL Server 2012 oraz systemu SIMPLE.ERP.</td>
 		</tr>
 		<tr>
-			<td>5.05.2014 - 31-07-2014   <b>AMG.net Łódź</b></td>
+			<td class="title"> od 5.05.2014 <a href="http://amg.net.pl"><strong>AMG.net Łódź</strong></a></td>
 		</tr>
 		<tr>
 			<td>Odbywałem wtedy praktyki zawodowe. Przez pierwszy miesiąc prowadzone były szkolenia przez starszych kolegów.
@@ -25,26 +25,19 @@
 			 Do ciekawszych można zaliczyć: JavaEE, Maven, Tomcat, Spring MVC, MySQL, Hibernate, JUnit, AspectJ, JSP, JSTL. Tworzyliśmy małe projekty szkoleniowe
 			 na potrzeby zaznajomienia się z tymi technologiami.
 			 Po okresie szkoleń zostaliśmy przydzieleni do prac w projektach komercyjnych. Trafiłem do grupy zajmującej się Oracle ATG Commerce.
-			 </td>
-		</tr>
-		<tr>
-			<td>od 1.08.2014</td>
-		</tr>
-		<tr>
-			<td>
-			Po ukończonych praktykach skorzystałem z oferty przedłużenia współpracy z AMG. Jako młodszy programista rozwijałem swój 
-			potencjał w dużym, rozwijanym od wielu lat, projekcie dla jednej z firm telekomunikacyjnych. Zajmowałem się rozwojem portalu,
+			Następnie skorzystałem z oferty przedłużenia współpracy z AMG. Jako młodszy programista rozwijałem swój 
+			potencjał w dużym, prowadzonym od wielu lat, projekcie dla jednej z firm telekomunikacyjnych. Zajmowałem się rozwojem portalu,
 			tworzeniem dokumentacji w oparciu o produkty Atlassian (jira, confluence), tworzeniem skryptów bazodanowych(baza danych Oracle) oraz wycenami projektów.
 			Zaznajomiłem się z wieloma narzędziami: JavaEE, ATG, Eclipse, SQLDeveloper, Jenkins, JBoss, JAXB, XStream, MemCached, Freemarker, Ant, SVN, Nginx, Apache, Linux.
 			 </td>
 		</tr>
 	</tbody> 
 </table>
-<h1>Własne projekty:</h1>
+<h1 class="main-title">Własne projekty:</h1>
 <table>
 	<tbody>
 		<tr>
-			<td>Program do wysyłki mejli - Google Cloud</td>
+			<td class="title"><strong>Program do wysyłki mejli - Google Cloud</strong></td>
 		</tr>
 		<tr>
 			<td>Stworzyłem skalowalną aplikację na serwerze Google App Engine. Odpowiedzialną za wysyłkę mejli tematycznych do adresatów zgromadzonych w bazie danych.
@@ -54,10 +47,10 @@
 			</td>
 		</tr>
 		<tr>
-			<td>Drzewo genealogiczne - Spring, Hibernate, JSF, AngularJS, PostgreSQL, Git</td>
+			<td class="title"><strong>Drzewo genealogiczne - Spring, Hibernate, JSF, AngularJS, PostgreSQL, Git</strong></td>
 		</tr>
 		<tr>
-			<td>TODO</td>
+			<td>Aktualnie tworzę aplikację. Opis funkcjonalności wkrótce ...</td>
 		</tr>
 	</tbody> 
 </table>

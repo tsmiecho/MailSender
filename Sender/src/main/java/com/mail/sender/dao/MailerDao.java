@@ -13,18 +13,25 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
 
 /**
- * @author tsmiecho
+ * Komponent odpowiedzialny za pobieranie danych.
+ * @author Tomek
  *
  */
 public class MailerDao {
 	
-	public List<Entity> getAllContentEntries(){
+	/**
+	 * Konfigurowalna wartość ile ostatnich klubów wyciągnąć.
+	 */
+	private static final int CLUBS_QUANTITY = 2;
+	
+	public Entity getContentEntity(){
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 	    Query query = new Query("Content");
 	    List<Entity> contents = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(1));
-	    return contents;
+	    return contents.get(0);
 	}
 	
 	public void parseAndSaveData(String content, String language){
@@ -35,6 +42,7 @@ public class MailerDao {
 		while(scanner.hasNext()){
 			Entity clubEntity = new Entity("Club");
 			clubEntity.setProperty("creationDate", date);
+			clubEntity.setProperty("lastUpadateDate", date);
 			clubEntity.setProperty("mail", scanner.next());
 			clubEntity.setProperty("club", scanner.next());
 			clubEntity.setProperty("language", language);
@@ -48,8 +56,8 @@ public class MailerDao {
 
 	public List<Entity> getOldestClubEntries() {
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-	    Query query = new Query("Club");
-	    List<Entity> entries = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(4));
+	    Query query = new Query("Club").addSort("lastUpadateDate", SortDirection.ASCENDING);;
+	    List<Entity> entries = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(CLUBS_QUANTITY));
 	    return entries;
 	}
 
@@ -58,5 +66,13 @@ public class MailerDao {
 	    Query query = new Query("Club");
 	    List<Entity> entries = datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
 	    return entries;
+	}
+
+	public void upDate(List<Entity> clubs) {
+		for(Entity entity : clubs){
+			entity.setProperty("lastUpadateDate", new Date());
+		}
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		datastore.put(clubs);
 	}
 }

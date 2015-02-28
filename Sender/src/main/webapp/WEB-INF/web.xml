@@ -8,7 +8,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>send</servlet-name>
-		<url-pattern>/send</url-pattern>
+		<url-pattern>/send/mails/cron</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>addAdress</servlet-name>
@@ -58,7 +58,14 @@
 		<servlet-name>addClub</servlet-name>
 		<url-pattern>/dodaj/klub</url-pattern>
 	</servlet-mapping>
-
+	<servlet>
+		<servlet-name>experience</servlet-name>
+		<jsp-file>/experience.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>experience</servlet-name>
+		<url-pattern>/experience</url-pattern>
+	</servlet-mapping>
 
 
 	<welcome-file-list>

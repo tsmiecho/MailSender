@@ -3,7 +3,6 @@ package com.mail.sender.servlet;
 
 import java.io.IOException;
 import java.util.Date;
-import java.util.List;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -27,10 +26,8 @@ public class AddAdressServlet extends HttpServlet {
 		MailerDao manager = new MailerDao();
 		
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		List<Entity> entries = manager.getAllContentEntries();
-		for(Entity entity : entries){
-			datastore.delete(entity.getKey());
-		}
+		Entity entity = manager.getContentEntity();
+		datastore.delete(entity.getKey());
 		
 		String language = req.getParameter("language");
 		String content = req.getParameter("content");

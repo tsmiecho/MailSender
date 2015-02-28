@@ -25,19 +25,19 @@ import com.mail.sender.freemarker.TemplateProcesor;
 
 /**
  * @author tsmiecho
- *
+ * 
  */
 public class SenderServlet extends HttpServlet {
 
 	@Override
-	public void doPost(HttpServletRequest req, HttpServletResponse resp)
+	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
 		TemplateProcesor procesor = new TemplateProcesor();
 		MailerDao manager = new MailerDao();
 		Properties props = new Properties();
 		Session session = Session.getDefaultInstance(props, null);
-		List<Entity> contents = manager.getAllContentEntries();
+		Entity content = manager.getContentEntity();
 		List<Entity> clubs = manager.getOldestClubEntries();
 		try {
 			for(Entity entity : clubs){
@@ -48,9 +48,10 @@ public class SenderServlet extends HttpServlet {
 						(String)entity.getProperty("mail"), (String)entity.getProperty("mail")));
 				msg.setSubject("Warm greetings");
 				
-				msg.setText(procesor.process((String) contents.get(0).getProperty("content"), (String)entity.getProperty("club")));
+				msg.setText(procesor.process((String) content.getProperty("content"), (String)entity.getProperty("club")));
 				Transport.send(msg);
 			}
+			manager.upDate(clubs);
 
 		} catch (AddressException e) {
 			resp.setContentType("text/plain");
