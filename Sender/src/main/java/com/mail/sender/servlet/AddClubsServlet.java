@@ -27,13 +27,6 @@ public class AddClubsServlet extends HttpServlet {
 			throws ServletException, IOException {
 		MailerDao dao = new MailerDao();
 		
-		//TODO potem do usuniecia
-		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		List<Entity> entries = dao.getAllClubEntries();
-		for(Entity entity : entries){
-			datastore.delete(entity.getKey());
-		}
-		
 		dao.parseAndSaveData(req.getParameter("content"),req.getParameter("language"));
 		resp.sendRedirect("/");
 	}

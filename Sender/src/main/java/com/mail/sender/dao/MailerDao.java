@@ -39,19 +39,35 @@ public class MailerDao {
 		scanner.useDelimiter(";|\\s+");
 		List<Entity> clubs = new ArrayList<Entity>();
 		Date date = new Date();
+		List<String> allMailAdresses = getAllMailAdresses();
 		while(scanner.hasNext()){
 			Entity clubEntity = new Entity("Club");
 			clubEntity.setProperty("creationDate", date);
 			clubEntity.setProperty("lastUpadateDate", date);
-			clubEntity.setProperty("mail", scanner.next());
+			String mail = scanner.next();
+			clubEntity.setProperty("mail", mail);
 			clubEntity.setProperty("club", scanner.next());
 			clubEntity.setProperty("language", language);
-			clubs.add(clubEntity);
+			
+			if(!allMailAdresses.contains(mail) && mail.contains("@") ){
+				clubs.add(clubEntity);
+			}
 		}
 		scanner.close();
 		
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		datastore.put(clubs);
+	}
+
+	private List<String> getAllMailAdresses() {
+		List<String> mailAdresses = new ArrayList<String>();
+		List<Entity> allClubEntries = getAllClubEntries();
+		if(allClubEntries != null){
+			for(Entity e : allClubEntries){
+				mailAdresses.add((String) e.getProperty("mail"));
+			}
+		}
+		return mailAdresses;
 	}
 
 	public List<Entity> getOldestClubEntries() {

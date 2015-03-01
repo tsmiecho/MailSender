@@ -42,7 +42,7 @@
 		<tr>
 			<td>Stworzyłem skalowalną aplikację na serwerze Google App Engine. Odpowiedzialną za wysyłkę mejli tematycznych do adresatów zgromadzonych w bazie danych.
 			Treść mejli jest przetwarzana freemarkerem dzięki czemu w mejlach występują bezpośrednie zwroty do adresata. Proces wysyłki jest wywoływany za pomocą mechanizmu Cron.
-			Dane zmagazynowane są w nierelacyjnej bazie danych z Google Cloud. Do wysyłki używam JavaMail. W praktyce wysyłam wiadomości do klubów sportowych, związków i komitetów olimpijskich z prośbą o pamiątki..
+			Dane zmagazynowane są w nierelacyjnej bazie danych z Google Cloud. Do wysyłki używam JavaMail. W praktyce wysyłam wiadomości do klubów sportowych, związków i komitetów olimpijskich z prośbą o pamiątki.
 			Regularnie otrzymuje odpowiedzi i często w kopercie są gadżety kolekcjonerskie. Cały projekt uważam za bardzo ciekawy. Wiele się nauczyłem i sprawił mi wiele radości.
 			</td>
 		</tr>
