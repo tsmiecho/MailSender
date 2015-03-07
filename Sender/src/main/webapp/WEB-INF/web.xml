@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+<web-app version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- API-->
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value>com.mail.sender.endpoint.GetMailHistory</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- CRON -->
 	<servlet>
 		<servlet-name>send</servlet-name>
 		<servlet-class>com.mail.sender.servlet.SenderServlet</servlet-class>
@@ -10,6 +27,8 @@
 		<servlet-name>send</servlet-name>
 		<url-pattern>/send/mails/cron</url-pattern>
 	</servlet-mapping>
+	
+	<!-- MAILING -->
 	<servlet>
 		<servlet-name>addAdress</servlet-name>
 		<servlet-class>com.mail.sender.servlet.AddAdressServlet</servlet-class>
@@ -58,6 +77,9 @@
 		<servlet-name>addClub</servlet-name>
 		<url-pattern>/dodaj/klub</url-pattern>
 	</servlet-mapping>
+	
+	
+	<!-- ABOUT ME -->
 	<servlet>
 		<servlet-name>experience</servlet-name>
 		<jsp-file>/experience.jsp</jsp-file>
@@ -66,7 +88,6 @@
 		<servlet-name>experience</servlet-name>
 		<url-pattern>/experience</url-pattern>
 	</servlet-mapping>
-
 
 	<welcome-file-list>
 		<welcome-file>hello.jsp</welcome-file>

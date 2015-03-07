@@ -13,7 +13,11 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.FilterPredicate;
+import com.google.appengine.api.datastore.Query.Filter;
+import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.mail.sender.model.MailHistory;
 
 /**
  * Komponent odpowiedzialny za pobieranie danych.
@@ -72,7 +76,7 @@ public class MailerDao {
 
 	public List<Entity> getOldestClubEntries() {
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-	    Query query = new Query("Club").addSort("lastUpadateDate", SortDirection.ASCENDING);;
+	    Query query = new Query("Club").addSort("lastUpadateDate", SortDirection.ASCENDING);
 	    List<Entity> entries = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(CLUBS_QUANTITY));
 	    return entries;
 	}
@@ -90,5 +94,16 @@ public class MailerDao {
 		}
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		datastore.put(clubs);
+	}
+
+	public List<Entity> getLastSendClubs(Date date) {
+
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		Filter propertyFilter =	new FilterPredicate("lastUpadateDate",
+				                      FilterOperator.GREATER_THAN_OR_EQUAL,
+				                      date);
+
+	    Query query = new Query("Club").setFilter(propertyFilter).addSort("lastUpadateDate", SortDirection.ASCENDING);
+	    return datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
 	}
 }
