@@ -13,11 +13,10 @@ import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.FetchOptions;
 import com.google.appengine.api.datastore.Query;
-import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.google.appengine.api.datastore.Query.Filter;
 import com.google.appengine.api.datastore.Query.FilterOperator;
+import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.google.appengine.api.datastore.Query.SortDirection;
-import com.mail.sender.model.MailHistory;
 
 /**
  * Komponent odpowiedzialny za pobieranie danych.
@@ -29,7 +28,7 @@ public class MailerDao {
 	/**
 	 * Konfigurowalna wartość ile ostatnich klubów wyciągnąć.
 	 */
-	private static final int CLUBS_QUANTITY = 2;
+	private static final int CLUBS_QUANTITY = 90;
 	
 	public Entity getContentEntity(){
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
@@ -40,7 +39,7 @@ public class MailerDao {
 	
 	public void parseAndSaveData(String content, String language){
 		Scanner scanner = new Scanner(content);
-		scanner.useDelimiter(";|\\s+");
+		scanner.useDelimiter(";|\n");
 		List<Entity> clubs = new ArrayList<Entity>();
 		Date date = new Date();
 		List<String> allMailAdresses = getAllMailAdresses();
@@ -50,7 +49,7 @@ public class MailerDao {
 			clubEntity.setProperty("lastUpadateDate", date);
 			String mail = scanner.next();
 			clubEntity.setProperty("mail", mail);
-			clubEntity.setProperty("club", scanner.next());
+			clubEntity.setProperty("club", ((String)scanner.next()).replaceAll("\r", ""));
 			clubEntity.setProperty("language", language);
 			
 			if(!allMailAdresses.contains(mail) && mail.contains("@") ){
@@ -105,5 +104,13 @@ public class MailerDao {
 
 	    Query query = new Query("Club").setFilter(propertyFilter).addSort("lastUpadateDate", SortDirection.ASCENDING);
 	    return datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
+	}
+
+	public void deleteAllClubs() {
+
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		for(Entity e : getAllClubEntries()){
+			datastore.delete(e.getKey());
+		}
 	}
 }

@@ -1,11 +1,12 @@
 package com.mail.sender.endpoint;
 
 
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+
+import javax.inject.Named;
 
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
@@ -13,8 +14,6 @@ import com.google.api.server.spi.config.ApiNamespace;
 import com.google.appengine.api.datastore.Entity;
 import com.mail.sender.dao.MailerDao;
 import com.mail.sender.model.MailHistory;
-
-import javax.inject.Named;
 
 @Api(name = "myApi",
      version = "v1",
