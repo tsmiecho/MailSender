@@ -26,8 +26,8 @@
 			 na potrzeby zaznajomienia się z tymi technologiami.
 			 Po okresie szkoleń zostaliśmy przydzieleni do prac w projektach komercyjnych. Trafiłem do grupy zajmującej się Oracle ATG Commerce.
 			Następnie skorzystałem z oferty przedłużenia współpracy z AMG. Jako młodszy programista rozwijałem swój 
-			potencjał w dużym, prowadzonym od wielu lat, projekcie dla jednej z firm telekomunikacyjnych. Zajmowałem się rozwojem portalu,
-			tworzeniem dokumentacji w oparciu o produkty Atlassian (jira, confluence), tworzeniem skryptów bazodanowych(baza danych Oracle) oraz wycenami projektów.
+			potencjał w dużym, prowadzonym od wielu lat, projekcie dla jednej z firm telekomunikacyjnych. Moimi głównymi zadaniami były: rozwój portalu,
+			tworzenie dokumentacji w oparciu o produkty Atlassian (jira, confluence), tworzenie skryptów bazodanowych(baza danych Oracle) oraz wycenany projektów.
 			Zaznajomiłem się z wieloma narzędziami: JavaEE, ATG, Eclipse, SQLDeveloper, Jenkins, JBoss, JAXB, XStream, MemCached, Freemarker, Ant, SVN, Nginx, Apache, Linux.
 			 </td>
 		</tr>
@@ -37,12 +37,20 @@
 <table>
 	<tbody>
 		<tr>
+			<td class="title"><a href="https://github.com/tsmiecho/Bank/tree/master/BankingSystem"><strong>Biblioteka bankowa - Java Core</strong></a></td>
+		</tr>
+		<tr>
+			<td>Był to mój pierwszy "większy" projekt podczas nauki programowania. Stworzyłem aplikację, która działa jak bank (w dużym przybliżeniu). Można przeprowadzać transakcje dla różnych użytkowników.
+			Program nie ma warstwy widoku ani bazy danych, jedyna możliwa interakcja to poprzez klasa testowa. Pisząc nauczyłem się bardzo wiele np: jak podzielić aplikację na warstwy czy przeprowadzać testy.
+			Dużym wyzwaniem dla mnie był mechanizm wstrzykiwania zależności, który został zaimplementowany przy wykorzystaniu refleksji.</td>
+		</tr>
+		<tr>
 			<td class="title"><a href="https://github.com/tsmiecho/MailSender/tree/master/Sender"><strong>Program do wysyłki mejli - Google Cloud</strong></a></td>
 		</tr>
 		<tr>
 			<td>Stworzyłem skalowalną aplikację na serwerze Google App Engine. Odpowiedzialną za wysyłkę mejli tematycznych do adresatów zgromadzonych w bazie danych.
 			Treść mejli jest przetwarzana freemarkerem dzięki czemu w mejlach występują bezpośrednie zwroty do adresata. Proces wysyłki jest wywoływany za pomocą mechanizmu Cron.
-			Dane zmagazynowane są w nierelacyjnej bazie danych z Google Cloud. Do wysyłki używam JavaMail. W praktyce wysyłam wiadomości do klubów sportowych, związków i komitetów olimpijskich z prośbą o pamiątki.
+			Dane zmagazynowane są w nierelacyjnej bazie danych z Google Cloud. Do wysyłki używam JavaMail. Raporty z wysłanych wiadomości są dostępne poprzez serwis restowy. W praktyce wysyłam wiadomości do klubów sportowych, związków i komitetów olimpijskich z prośbą o pamiątki.
 			Regularnie otrzymuje odpowiedzi i często w kopercie są gadżety kolekcjonerskie. Cały projekt uważam za bardzo ciekawy. Wiele się nauczyłem i sprawił mi wiele radości.
 			</td>
 		</tr>
