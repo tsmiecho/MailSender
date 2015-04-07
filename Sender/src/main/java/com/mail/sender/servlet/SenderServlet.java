@@ -51,7 +51,7 @@ public class SenderServlet extends HttpServlet {
 				msg.setText(procesor.process((String) content.getProperty("content"), (String)entity.getProperty("club")));
 				Transport.send(msg);
 			}
-			manager.upDate(clubs);
+			
 
 		} catch (AddressException e) {
 			resp.setContentType("text/plain");
@@ -62,6 +62,7 @@ public class SenderServlet extends HttpServlet {
 			resp.getWriter().println("Something went wrong. Please try again.");
 			throw new RuntimeException(e);
 		}
+		manager.upDate(clubs);
 		resp.sendRedirect("/");
 	}
 }

@@ -92,6 +92,7 @@
 			<artifactId>freemarker</artifactId>
 			<version>${org.freemarker.version}</version>
 		</dependency>
+		
 	</dependencies>
 
 
