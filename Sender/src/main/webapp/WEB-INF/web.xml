@@ -78,17 +78,6 @@
 		<url-pattern>/dodaj/klub</url-pattern>
 	</servlet-mapping>
 	
-	
-	<!-- ABOUT ME -->
-	<servlet>
-		<servlet-name>experience</servlet-name>
-		<jsp-file>/experience.jsp</jsp-file>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>experience</servlet-name>
-		<url-pattern>/experience</url-pattern>
-	</servlet-mapping>
-
 	<welcome-file-list>
 		<welcome-file>hello.jsp</welcome-file>
 	</welcome-file-list>

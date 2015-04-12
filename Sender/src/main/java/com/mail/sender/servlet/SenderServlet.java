@@ -4,6 +4,7 @@
 package com.mail.sender.servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -39,6 +40,7 @@ public class SenderServlet extends HttpServlet {
 		Session session = Session.getDefaultInstance(props, null);
 		Entity content = manager.getContentEntity();
 		List<Entity> clubs = manager.getOldestClubEntries();
+		List<Entity> clubsToUpdate = new ArrayList<Entity>();
 		try {
 			for(Entity entity : clubs){
 				Message msg = new MimeMessage(session);
@@ -50,6 +52,7 @@ public class SenderServlet extends HttpServlet {
 				
 				msg.setText(procesor.process((String) content.getProperty("content"), (String)entity.getProperty("club")));
 				Transport.send(msg);
+				clubsToUpdate.add(entity);
 			}
 			
 
@@ -62,7 +65,7 @@ public class SenderServlet extends HttpServlet {
 			resp.getWriter().println("Something went wrong. Please try again.");
 			throw new RuntimeException(e);
 		}
-		manager.upDate(clubs);
+		manager.upDate(clubsToUpdate);
 		resp.sendRedirect("/");
 	}
 }
