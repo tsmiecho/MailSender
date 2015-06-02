@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <cron>
+    <url>/send/mails/cron</url>
+    <description>Mail out daily messages</description>
+    <schedule>every mon,tue,wed,thu 10:00</schedule>
+    <timezone>Europe/London</timezone>
+  </cron>
+</cronentries>

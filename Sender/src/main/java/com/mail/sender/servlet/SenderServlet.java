@@ -5,6 +5,7 @@ package com.mail.sender.servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -12,7 +13,6 @@ import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.ServletException;
@@ -41,29 +41,46 @@ public class SenderServlet extends HttpServlet {
 		Entity content = manager.getContentEntity();
 		List<Entity> clubs = manager.getOldestClubEntries();
 		List<Entity> clubsToUpdate = new ArrayList<Entity>();
-		try {
-			for(Entity entity : clubs){
+		StringBuilder text = new StringBuilder(" Dzisiejsze adresy:\n");
+		for (Entity entity : clubs) {
+			try {
 				Message msg = new MimeMessage(session);
 				msg.setFrom(new InternetAddress("smiechu18@gmail.com",
 						"smiechu18@gmail.com"));
-				msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
-						(String)entity.getProperty("mail"), (String)entity.getProperty("mail")));
+				msg.addRecipient(Message.RecipientType.TO,
+						new InternetAddress(
+								(String) entity.getProperty("mail"),
+								(String) entity.getProperty("mail")));
 				msg.setSubject("Warm greetings");
-				
-				msg.setText(procesor.process((String) content.getProperty("content"), (String)entity.getProperty("club")));
-				Transport.send(msg);
-				clubsToUpdate.add(entity);
-			}
-			
 
-		} catch (AddressException e) {
-			resp.setContentType("text/plain");
-			resp.getWriter().println("Something went wrong. Please try again.");
-			throw new RuntimeException(e);
+				msg.setText(procesor.process(
+						(String) content.getProperty("content"),
+						(String) entity.getProperty("club")));
+				Transport.send(msg);
+				text.append((String) entity.getProperty("club")).append("\n");
+				clubsToUpdate.add(entity);
+			} catch (MessagingException e) {
+				resp.setContentType("text/plain");
+				resp.getWriter().println(
+						"Something went wrong. Please try again.");
+			}
+		}
+		
+		// wyslanie mejla do mnie z raportem
+		try {
+			Message msg = new MimeMessage(session);
+			msg.setFrom(new InternetAddress("smiechu18@gmail.com",
+					"smiechu18@gmail.com"));
+			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
+					"smiecho18@interia.pl", "smiecho18@interia.pl"));
+			msg.setSubject("Raport z wysłanych mejli" + new Date());
+
+			msg.setText(text.toString());
+			Transport.send(msg);
 		} catch (MessagingException e) {
 			resp.setContentType("text/plain");
 			resp.getWriter().println("Something went wrong. Please try again.");
-			throw new RuntimeException(e);
+
 		}
 		manager.upDate(clubsToUpdate);
 		resp.sendRedirect("/");

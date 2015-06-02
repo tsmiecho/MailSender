@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- API-->
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value>com.mail.sender.endpoint.GetMailHistory</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- CRON -->
+	<servlet>
+		<servlet-name>send</servlet-name>
+		<servlet-class>com.mail.sender.servlet.SenderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>send</servlet-name>
+		<url-pattern>/send/mails/cron</url-pattern>
+	</servlet-mapping>
+	
+	<!-- MAILING -->
+	<servlet>
+		<servlet-name>addAdress</servlet-name>
+		<servlet-class>com.mail.sender.servlet.AddAdressServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addAdress</servlet-name>
+		<url-pattern>/add/adress</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addClubs</servlet-name>
+		<servlet-class>com.mail.sender.servlet.AddClubsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addClubs</servlet-name>
+		<url-pattern>/add/clubs</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addAddresJsp</servlet-name>
+		<jsp-file>/add_addres.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addAddresJsp</servlet-name>
+		<url-pattern>/dodaj/adres</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addClubsParseJsp</servlet-name>
+		<jsp-file>/add_clubs_with_parse.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addClubsParseJsp</servlet-name>
+		<url-pattern>/parser/klub</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>andrzejJsp</servlet-name>
+		<jsp-file>/andrzej_welcome_page.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>andrzejJsp</servlet-name>
+		<url-pattern>/andrzej</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>addClub</servlet-name>
+		<jsp-file>/add_club.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addClub</servlet-name>
+		<url-pattern>/dodaj/klub</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>hello.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
