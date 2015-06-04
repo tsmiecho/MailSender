@@ -28,7 +28,7 @@ public class MailerDao {
 	/**
 	 * Konfigurowalna wartość ile ostatnich klubów wyciągnąć.
 	 */
-	private static final int CLUBS_QUANTITY = 20;
+	private static final int CLUBS_QUANTITY = 8;
 	
 	public Entity getContentEntity(){
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();

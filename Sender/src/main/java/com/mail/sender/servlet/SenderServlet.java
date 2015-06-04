@@ -42,8 +42,10 @@ public class SenderServlet extends HttpServlet {
 		List<Entity> clubs = manager.getOldestClubEntries();
 		List<Entity> clubsToUpdate = new ArrayList<Entity>();
 		StringBuilder text = new StringBuilder(" Dzisiejsze adresy:\n");
+		int counter = 0;
 		for (Entity entity : clubs) {
 			try {
+				counter++;
 				Message msg = new MimeMessage(session);
 				msg.setFrom(new InternetAddress("smiechu18@gmail.com",
 						"smiechu18@gmail.com"));
@@ -57,7 +59,7 @@ public class SenderServlet extends HttpServlet {
 						(String) content.getProperty("content"),
 						(String) entity.getProperty("club")));
 				Transport.send(msg);
-				text.append((String) entity.getProperty("club")).append("\n");
+				text.append(counter).append(".").append((String) entity.getProperty("club")).append("\n");
 				clubsToUpdate.add(entity);
 			} catch (MessagingException e) {
 				resp.setContentType("text/plain");
@@ -73,7 +75,7 @@ public class SenderServlet extends HttpServlet {
 					"smiechu18@gmail.com"));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
 					"smiecho18@interia.pl", "smiecho18@interia.pl"));
-			msg.setSubject("Raport z wysłanych mejli" + new Date());
+			msg.setSubject("Raport z mejli " + new Date());
 
 			msg.setText(text.toString());
 			Transport.send(msg);
