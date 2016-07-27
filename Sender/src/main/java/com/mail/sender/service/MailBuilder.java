@@ -4,11 +4,15 @@ import com.google.appengine.api.datastore.Entity;
 import com.mail.sender.freemarker.TemplateProcesor;
 import freemarker.template.TemplateException;
 
+import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.Multipart;
 import javax.mail.Session;
 import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Collection;
@@ -33,8 +37,13 @@ public final class MailBuilder {
         final String mail = (String) club.getProperty("mail");
         msg.addRecipient(Message.RecipientType.TO, new InternetAddress(mail, mail));
         msg.setSubject("Warm greetings");
-        msg.setText(TemplateProcesor.process((String) club.getProperty("club"),
-                                             (String) content.getProperty("content")));
+        Multipart multipart = new MimeMultipart();
+        // Text message part
+        BodyPart messageBodyPart = new MimeBodyPart();
+        messageBodyPart.setText(TemplateProcesor.process((String) club.getProperty("club"),
+                                                         (String) content.getProperty("content")));
+        multipart.addBodyPart(messageBodyPart);
+        msg.setContent(multipart);
 
         return msg;
     }
@@ -46,7 +55,12 @@ public final class MailBuilder {
             msg.setFrom(new InternetAddress("smiechu18@gmail.com", "smiechu18@gmail.com"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("smiecho18@interia.pl", "smiecho18@interia.pl"));
             msg.setSubject("Sending report");
-            msg.setText(buildText(subtract, errors));
+            Multipart multipart = new MimeMultipart();
+            // Text message part
+            BodyPart messageBodyPart = new MimeBodyPart();
+            messageBodyPart.setText(buildText(subtract, errors));
+            multipart.addBodyPart(messageBodyPart);
+            msg.setContent(multipart);
         } catch (MessagingException e) {
             log.log(Level.SEVERE, e.getMessage(), e);
         } catch (UnsupportedEncodingException e) {

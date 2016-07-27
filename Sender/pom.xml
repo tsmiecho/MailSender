@@ -25,6 +25,7 @@
 		<commons-collections-version>4.1</commons-collections-version>
 		<org.powermock.version>1.6.5</org.powermock.version>
 		<org.easymock.version>3.4</org.easymock.version>
+		<commons-lang3-version>3.4</commons-lang3-version>
 	</properties>
 
 	<prerequisites>
@@ -134,6 +135,12 @@
 			<groupId>org.easymock</groupId>
 			<artifactId>easymock</artifactId>
 			<version>${org.easymock.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3-version}</version>
 		</dependency>
 
 

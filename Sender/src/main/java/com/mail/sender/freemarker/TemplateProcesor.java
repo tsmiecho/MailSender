@@ -44,7 +44,7 @@ public class TemplateProcesor {
         if(log.isLoggable(Level.INFO)){
             log.info("Values before freemarker processing template = ["+stringTemplate+"],\n "+objects);
         }
-        template.process(objects, new StringWriter());
+        template.process(objects, writer);
         return writer.toString();
     }
 }
