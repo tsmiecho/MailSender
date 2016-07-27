@@ -10,7 +10,7 @@
 	<artifactId>Sender</artifactId>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>1.7</java.version>
 		<appengine.app.version>1</appengine.app.version>
 		<appengine.target.version>1.9.40</appengine.target.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -21,6 +21,8 @@
 		<maven-compiler-plugin>3.3</maven-compiler-plugin>
 		<maven-war-plugin>2.6</maven-war-plugin>
 		<servlet-api-version>3.0-alpha-1</servlet-api-version>
+		<junit.version>4.12</junit.version>
+		<commons-collections-version>4.1</commons-collections-version>
 	</properties>
 
 	<prerequisites>
@@ -97,7 +99,20 @@
 			<artifactId>freemarker</artifactId>
 			<version>${org.freemarker.version}</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>${commons-collections-version}</version>
+		</dependency>
+
+
 	</dependencies>
 
 
