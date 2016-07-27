@@ -1,12 +1,4 @@
-
 package com.mail.sender.servlet;
-
-import java.io.IOException;
-import java.util.Date;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
@@ -15,8 +7,14 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.mail.sender.dao.MailerDao;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Date;
+
 /**
- * @author tsmiecho
+ * @author Tomasz Śmiechowicz
  *
  */
 public class AddAdressServlet extends HttpServlet {

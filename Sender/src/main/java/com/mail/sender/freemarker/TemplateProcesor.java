@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 /**
  * Class responsible for freemarker processing.
  *
- * @author Tomek
+ * @author Tomasz Śmiechowicz
  */
 public class TemplateProcesor {
 
@@ -40,9 +40,9 @@ public class TemplateProcesor {
         Template template = new Template("content", new StringReader(stringTemplate), config);
         StringWriter writer = new StringWriter();
         Map<String, T> objects = new HashMap<>();
-        objects.put("bean", valueBean);
-        if(log.isLoggable(Level.CONFIG)){
-            log.config("Values before freemarker processing template = ["+stringTemplate+"],\n "+objects);
+        objects.put("club", valueBean);
+        if(log.isLoggable(Level.INFO)){
+            log.info("Values before freemarker processing template = ["+stringTemplate+"],\n "+objects);
         }
         template.process(objects, new StringWriter());
         return writer.toString();

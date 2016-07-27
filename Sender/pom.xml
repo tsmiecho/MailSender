@@ -23,6 +23,8 @@
 		<servlet-api-version>3.0-alpha-1</servlet-api-version>
 		<junit.version>4.12</junit.version>
 		<commons-collections-version>4.1</commons-collections-version>
+		<org.powermock.version>1.6.5</org.powermock.version>
+		<org.easymock.version>3.4</org.easymock.version>
 	</properties>
 
 	<prerequisites>
@@ -110,6 +112,28 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-collections4</artifactId>
 			<version>${commons-collections-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>${org.powermock.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-easymock</artifactId>
+			<version>${org.powermock.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-core</artifactId>
+			<version>${org.powermock.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.easymock</groupId>
+			<artifactId>easymock</artifactId>
+			<version>${org.easymock.version}</version>
 		</dependency>
 
 

@@ -3,6 +3,6 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="/stylesheets/hello.css" />
-<title>:)</title>
+<title>:]</title>
 </head>
 </html>

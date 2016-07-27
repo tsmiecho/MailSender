@@ -3,11 +3,6 @@
  */
 package com.mail.sender.dao;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Scanner;
-
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
@@ -18,15 +13,21 @@ import com.google.appengine.api.datastore.Query.FilterOperator;
 import com.google.appengine.api.datastore.Query.FilterPredicate;
 import com.google.appengine.api.datastore.Query.SortDirection;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
+
 /**
- * Komponent odpowiedzialny za pobieranie danych.
- * @author Tomek
+ * Class responsible for retrieving data.
+ * @author Tomasz Smiechowicz
  *
  */
 public class MailerDao {
 	
 	/**
-	 * Konfigurowalna wartość ile ostatnich klubów wyciągnąć.
+	 * Configurable field how many entries to retrieve from db.
 	 */
 	private static final int CLUBS_QUANTITY = 8;
 	
@@ -80,6 +81,30 @@ public class MailerDao {
 	    return entries;
 	}
 
+	public List<Entity> getMockedOldestClubEntries() {
+		Entity clubEntity = new Entity("Club");
+		clubEntity.setProperty("creationDate", new Date());
+		clubEntity.setProperty("lastUpadateDate", new Date());
+		clubEntity.setProperty("mail", "smiecho18@interia.pl");
+		clubEntity.setProperty("club", "club");
+		clubEntity.setProperty("language", "pl");
+
+		Entity clubEntity2 = new Entity("Club");
+		clubEntity2.setProperty("creationDate", new Date());
+		clubEntity2.setProperty("lastUpadateDate", new Date());
+		clubEntity2.setProperty("mail", "error!");
+		clubEntity2.setProperty("club", "club");
+		clubEntity2.setProperty("language", "pl");
+
+		Entity clubEntity3 = new Entity("Club");
+		clubEntity3.setProperty("creationDate", new Date());
+		clubEntity3.setProperty("lastUpadateDate", new Date());
+		clubEntity3.setProperty("mail", "smiecho18@interia.pl");
+		clubEntity3.setProperty("club", "club3");
+
+		return Arrays.asList(new Entity[]{clubEntity, clubEntity2, clubEntity3});
+	}
+
 	public List<Entity> getAllClubEntries() {
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 	    Query query = new Query("Club");
@@ -104,13 +129,5 @@ public class MailerDao {
 
 	    Query query = new Query("Club").setFilter(propertyFilter).addSort("lastUpadateDate", SortDirection.ASCENDING);
 	    return datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
-	}
-
-	public void deleteAllClubs() {
-
-		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		for(Entity e : getAllClubEntries()){
-			datastore.delete(e.getKey());
-		}
 	}
 }

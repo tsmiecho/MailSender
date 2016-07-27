@@ -14,6 +14,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Endpoint generating history of mails.
+ * @author Tomasz Smiechowicz
+ */
 @Api(name = "myApi",
      version = "v1",
      namespace = @ApiNamespace(ownerDomain = "tsmiecho2.appspot.com",

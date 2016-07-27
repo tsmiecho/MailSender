@@ -2,6 +2,9 @@ package com.mail.sender.model;
 
 import java.util.Date;
 
+/**
+ * @author Tomasz Śmiechowicz
+ */
 public class MailHistory {
 
 	private String name;
