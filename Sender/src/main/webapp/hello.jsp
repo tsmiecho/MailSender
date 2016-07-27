@@ -3,6 +3,6 @@
 <html>
 <head>
 <link type="text/css" rel="stylesheet" href="/stylesheets/hello.css" />
-<title>About me</title>
+<title>:)</title>
 </head>
 </html>

@@ -10,12 +10,17 @@
 	<artifactId>Sender</artifactId>
 
 	<properties>
+		<java.version>1.8</java.version>
 		<appengine.app.version>1</appengine.app.version>
-		<appengine.target.version>1.9.17</appengine.target.version>
+		<appengine.target.version>1.9.40</appengine.target.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<org.freemarker.version>2.3.20</org.freemarker.version>
-		<org.log4j.version>1.2.16</org.log4j.version>
-		<javax.mail.version>1.4.4</javax.mail.version>
+		<org.freemarker.version>2.3.25-incubating</org.freemarker.version>
+		<org.log4j.version>1.2.17</org.log4j.version>
+		<javax.mail.version>1.5.0-b01</javax.mail.version>
+		<versions-maven-plugin>2.2</versions-maven-plugin>
+		<maven-compiler-plugin>3.3</maven-compiler-plugin>
+		<maven-war-plugin>2.6</maven-war-plugin>
+		<servlet-api-version>3.0-alpha-1</servlet-api-version>
 	</properties>
 
 	<prerequisites>
@@ -42,7 +47,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
-			<version>2.5</version>
+			<version>3.0-alpha-1</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -103,7 +108,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.1</version>
+				<version>${versions-maven-plugin}</version>
 				<executions>
 					<execution>
 						<phase>compile</phase>
@@ -116,17 +121,17 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<version>3.1</version>
+				<version>${maven-compiler-plugin}</version>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.4</version>
+				<version>${maven-war-plugin}</version>
 				<configuration>
 					<archiveClasses>true</archiveClasses>
 					<webXml>${project.build.directory}/generated-sources/appengine-endpoints/WEB-INF/web.xml</webXml>
@@ -153,7 +158,7 @@
 			<plugin>
 				<groupId>com.google.appengine</groupId>
 				<artifactId>appengine-maven-plugin</artifactId>
-				<version>1.9.17</version>
+				<version>${appengine.target.version}</version>
 				<configuration>
 					<enableJarClasses>false</enableJarClasses>
 					<jvmFlags>

@@ -1,13 +1,6 @@
 package com.mail.sender.endpoint;
 
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
-import javax.inject.Named;
-
 import com.google.api.server.spi.config.Api;
 import com.google.api.server.spi.config.ApiMethod;
 import com.google.api.server.spi.config.ApiNamespace;
@@ -15,10 +8,16 @@ import com.google.appengine.api.datastore.Entity;
 import com.mail.sender.dao.MailerDao;
 import com.mail.sender.model.MailHistory;
 
+import javax.inject.Named;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+
 @Api(name = "myApi",
      version = "v1",
-     namespace = @ApiNamespace(ownerDomain = "tsmiecho.appspot.com",
-                                ownerName = "tsmiecho.appspot.com",
+     namespace = @ApiNamespace(ownerDomain = "tsmiecho2.appspot.com",
+                                ownerName = "tsmiecho2.appspot.com",
                                 packagePath=""))
 public class GetMailHistory {
 
