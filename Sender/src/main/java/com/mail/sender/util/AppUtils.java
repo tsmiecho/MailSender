@@ -1,4 +1,4 @@
-package com.mail.sender.Util;
+package com.mail.sender.util;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

@@ -31,7 +31,7 @@
 	<!-- MAILING -->
 	<servlet>
 		<servlet-name>addAdress</servlet-name>
-		<servlet-class>com.mail.sender.servlet.AddAdressServlet</servlet-class>
+		<servlet-class>com.mail.sender.servlet.AddAddressServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>addAdress</servlet-name>

@@ -1,7 +1,7 @@
 package com.mail.sender.servlet;
 
 import com.google.appengine.api.datastore.Entity;
-import com.mail.sender.Util.AppUtils;
+import com.mail.sender.util.AppUtils;
 import com.mail.sender.dao.MailerDao;
 import com.mail.sender.service.MailBuilder;
 import com.mail.sender.service.MailSender;

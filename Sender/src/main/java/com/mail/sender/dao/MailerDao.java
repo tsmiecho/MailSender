@@ -4,6 +4,7 @@ import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.FetchOptions;
+import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.Filter;
 import com.google.appengine.api.datastore.Query.FilterOperator;
@@ -29,8 +30,15 @@ public class MailerDao {
 	 */
 	private static final int CLUBS_QUANTITY = 8;
 
+    /**
+     * GAE class responsible for storing data.
+     */
 	private DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 
+    /**
+     * Method retrieves content entry.
+     * @return content entry.
+     */
 	public Entity getContentEntity(){
 	    Query query = new Query("Content");
 	    List<Entity> contents = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(1));
@@ -73,22 +81,34 @@ public class MailerDao {
 		datastore.put(entities);
 	}
 
+    /**
+     * Method retrieves all mail addresses.
+     * @return list of mail addresses.
+     */
 	public List<String> getAllMailAdresses() {
-		List<String> mailAdresses = new ArrayList<>();
+		List<String> mailAddresses = new ArrayList<>();
 		List<Entity> allClubEntries = getAllClubEntries();
 		if(allClubEntries != null){
 			for(Entity e : allClubEntries){
-				mailAdresses.add((String) e.getProperty("mail"));
+				mailAddresses.add((String) e.getProperty("mail"));
 			}
 		}
-		return mailAdresses;
+		return mailAddresses;
 	}
 
+    /**
+     * Method returns oldest entries.
+     * @return list of oldest entries
+     */
 	public List<Entity> getOldestClubEntries() {
 	    Query query = new Query("Club").addSort("lastUpadateDate", SortDirection.ASCENDING);
 	    return datastore.prepare(query).asList(FetchOptions.Builder.withLimit(CLUBS_QUANTITY));
 	}
 
+    /**
+     * Method returns mocked clubs.
+     * @return list of clubs.
+     */
 	public List<Entity> getMockedOldestClubEntries() {
 		Entity clubEntity = new Entity("Club");
 		clubEntity.setProperty("creationDate", new Date());
@@ -110,21 +130,30 @@ public class MailerDao {
 		clubEntity3.setProperty("mail", "smiecho18@interia.pl");
 		clubEntity3.setProperty("club", "club3");
 
-		return Arrays.asList(new Entity[]{clubEntity, clubEntity2, clubEntity3});
+		return Arrays.asList(clubEntity, clubEntity2, clubEntity3);
 	}
 
-	public List<Entity> getAllClubEntries() {
+	private List<Entity> getAllClubEntries() {
 	    Query query = new Query("Club");
 	    return datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
 	}
 
-	public void upDate(List<Entity> clubs) {
-		for(Entity entity : clubs){
-			entity.setProperty("lastUpadateDate", new Date());
+    /**
+     * Method updates entries.
+     * @param entries - list of entries
+     */
+	public void upDate(List<Entity> entries) {
+		for(Entity e : entries){
+			e.setProperty("lastUpadateDate", new Date());
 		}
-		saveEntries(clubs);
+		saveEntries(entries);
 	}
 
+    /**
+     * Method retrievs last modified entries.
+     * @param date
+     * @return list of entries
+     */
 	public List<Entity> getLastSendClubs(Date date) {
 
 		Filter propertyFilter =	new FilterPredicate("lastUpadateDate",
@@ -134,4 +163,12 @@ public class MailerDao {
 	    Query query = new Query("Club").setFilter(propertyFilter).addSort("lastUpadateDate", SortDirection.ASCENDING);
 	    return datastore.prepare(query).asList(FetchOptions.Builder.withDefaults());
 	}
+
+    /**
+     * Method deletes entry by key.
+     * @param key - entry's key
+     */
+    public void delete(Key key) {
+        datastore.delete(key);
+    }
 }

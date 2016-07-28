@@ -1,7 +1,7 @@
 package com.mail.sender.servlet;
 
 import com.google.appengine.api.datastore.Entity;
-import com.mail.sender.Util.AppUtils;
+import com.mail.sender.util.AppUtils;
 import com.mail.sender.dao.MailerDao;
 import com.mail.sender.model.Language;
 import org.apache.commons.collections4.CollectionUtils;
@@ -53,6 +53,7 @@ public class AddClubsServlet extends HttpServlet {
         if(log.isLoggable(Level.INFO)){
             log.info("Clubs after filtering ["+entities+"]");
         }
+
         if(testMode){
             if(log.isLoggable(Level.INFO)){
                 log.info("Test mode! Skipping saving data");
@@ -60,7 +61,11 @@ public class AddClubsServlet extends HttpServlet {
             resp.sendRedirect("/");
             return;
         }
+
         dao.saveEntries(entities);
+        if(log.isLoggable(Level.INFO)){
+            log.info("doPost finished, redirect now");
+        }
         resp.sendRedirect("/");
     }
 }
