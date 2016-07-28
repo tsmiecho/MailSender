@@ -1,6 +1,7 @@
 package com.mail.sender.servlet;
 
 import com.google.appengine.api.datastore.Entity;
+import com.mail.sender.Util.AppUtils;
 import com.mail.sender.dao.MailerDao;
 import com.mail.sender.service.MailBuilder;
 import com.mail.sender.service.MailSender;
@@ -30,7 +31,7 @@ public class SenderServlet extends HttpServlet {
 
 	private final MailerDao manager = new MailerDao();
 
-	private boolean testMode = true;
+	private final boolean testMode = Boolean.valueOf(AppUtils.getBundle("test.mode"));
 
 	@Override
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -90,7 +91,7 @@ public class SenderServlet extends HttpServlet {
 		Message msg = MailBuilder.createReportBody(CollectionUtils.subtract(clubs, errors), errors);
 		if(msg == null){
 			if(log.isLoggable(Level.INFO)){
-				log.info("The report will not be sent, msg=["+msg+"]");
+				log.info("The report will not be sent, null message");
 			}
 			return;
 		}

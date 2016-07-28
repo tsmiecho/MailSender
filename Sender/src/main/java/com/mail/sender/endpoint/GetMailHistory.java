@@ -30,7 +30,7 @@ public class GetMailHistory {
     	Calendar instance = Calendar.getInstance();
     	instance.add(Calendar.DATE, - Integer.valueOf(dayBefore));
     	MailerDao dao = new MailerDao();
-    	List<MailHistory> response = new ArrayList<MailHistory>();
+    	List<MailHistory> response = new ArrayList<>();
         List<Entity> clubs = dao.getLastSendClubs(instance.getTime());
         for(Entity e : clubs){
         	MailHistory mh = new MailHistory();

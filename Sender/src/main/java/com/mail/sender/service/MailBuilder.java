@@ -40,7 +40,7 @@ public final class MailBuilder {
         Multipart multipart = new MimeMultipart();
         // Text message part
         BodyPart messageBodyPart = new MimeBodyPart();
-        messageBodyPart.setText(TemplateProcesor.process((String) club.getProperty("club"),
+        messageBodyPart.setText(TemplateProcesor.process( club.getProperty("club"),
                                                          (String) content.getProperty("content")));
         multipart.addBodyPart(messageBodyPart);
         msg.setContent(multipart);
@@ -61,9 +61,7 @@ public final class MailBuilder {
             messageBodyPart.setText(buildText(subtract, errors));
             multipart.addBodyPart(messageBodyPart);
             msg.setContent(multipart);
-        } catch (MessagingException e) {
-            log.log(Level.SEVERE, e.getMessage(), e);
-        } catch (UnsupportedEncodingException e) {
+        } catch (MessagingException | UnsupportedEncodingException e) {
             log.log(Level.SEVERE, e.getMessage(), e);
         }
         return msg;
